@@ -7,19 +7,22 @@ Frank Xia -- May 2018
 
 ### Bible
 
-![](images/copy_and_paste_from_stack_overflow.png)
+![](images/copy_and_paste_from_stack_overflow.png =500x400)
 
 ### Theory
 
 * Frequentist
+
 ![](images/ISLR.jpg)
 ![](images/ESL.png)
 
 * Bayesian
+
 ![](images/PRML.png)
 ![](images/MLAPP.png)
 
 * Deep Learning
+
 ![](images/deep_learning.png)
 ![](images/RL.jpg)
 
@@ -29,6 +32,7 @@ Frank Xia -- May 2018
 ![](images/building_ML_systems_with_python.png)
 
 ### Coding
+
 ![](images/Algo.png)
 ![](images/CSAPP.png)
 ![](images/python_for_data_analysis.png)
