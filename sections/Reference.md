@@ -2,33 +2,33 @@
 
 ### Bible
 
-<img src="images/copy_and_paste_from_stack_overflow.png" width="300px">
+<img src="../images/copy_and_paste_from_stack_overflow.png" width="300px">
 
 ### Theory
 
 * Frequentist
 
-<img src="images/ISLR.jpg" width="300px"><img src="images/ESL.png" width="300px">
+<img src="../images/ISLR.jpg" width="300px"><img src="../images/ESL.png" width="300px">
 
 * Bayesian
 
-<img src="images/PRML.png" width="300px"><img src="images/MLAPP.png" width="300px">
+<img src="../images/PRML.png" width="300px"><img src="../images/MLAPP.png" width="300px">
 
 * Deep Learning
 
-<img src="images/deep_learning.png" width="300px"><img src="images/RL.jpg" width="300px">
+<img src="../images/deep_learning.png" width="300px"><img src="../images/RL.jpg" width="300px">
 
 ### Practical
 
-<img src="images/ML_in_action.png" width="300px"><img src="images/building_ML_systems_with_python.png" width="300px">
+<img src="../images/ML_in_action.png" width="300px"><img src="../images/building_ML_systems_with_python.png" width="300px">
 
 
 ### Coding
 
-<img src="images/Algo.png" width="300px"><img src="images/CSAPP.png" width="300px">
-<img src="images/python_for_data_analysis.png" width="300px"><img src="images/fluent_python.png" width="300px">
-<img src="images/high_performance_python.png" width="300px"><img src="images/advanced_R.png" width="300px">
-<img src="images/Learning_Spark.png" width="300px"><img src="images/Learning_Scala.png" width="300px">
+<img src="../images/Algo.png" width="300px"><img src="../images/CSAPP.png" width="300px">
+<img src="../images/python_for_data_analysis.png" width="300px"><img src="../images/fluent_python.png" width="300px">
+<img src="../images/high_performance_python.png" width="300px"><img src="../images/advanced_R.png" width="300px">
+<img src="../images/Learning_Spark.png" width="300px"><img src="../images/Learning_Scala.png" width="300px">
 
 ### Online Classes
 
@@ -56,3 +56,4 @@
     
 * **Machine Learning Engineer**
     - [Example 1: Opendoor](https://jobs.lever.co/opendoor/47bbc9cf-2d6e-4b5a-8f53-0050a1eb8937)
+
