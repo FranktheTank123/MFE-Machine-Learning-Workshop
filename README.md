@@ -1,13 +1,13 @@
 # Machine Learning Workshop -- A Full-Stack Perspective
 
-Frank Xia -- May 2018
+Frank Xia, May 2018
 
 
+## Table of Content
 
-
-## Glossaries
-
-## Interview Questions
-
-## Case Studies
+* [Machine Learning in Real World](sections/ML_positions.md)
+* [Warm up](sections/you_should_know.md)
+* [Learn Something New](sections/new_stuffs/new_stuffs.md)
+* Interview Questions
+* [Machine Learning References](sections/reference/reference.md)
 
