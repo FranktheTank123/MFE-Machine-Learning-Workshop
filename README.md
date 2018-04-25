@@ -7,14 +7,14 @@ Frank Xia -- May 2018
 
 ### Bible
 
-![](images/copy_and_paste_from_stack_overflow.png =500x400)
+<img src="images/copy_and_paste_from_stack_overflow.png" width="300px">
 
 ### Theory
 
 * Frequentist
 
-![](images/ISLR.jpg)
-![](images/ESL.png)
+<img src="images/ISLR.jpg" width="300px">
+<img src="images/ESL.png" width="300px">
 
 * Bayesian
 
