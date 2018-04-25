@@ -18,29 +18,30 @@ Frank Xia -- May 2018
 
 * Bayesian
 
-![](images/PRML.png)
-![](images/MLAPP.png)
+<img src="images/PRML.png" width="300px">
+<img src="images/MLAPP.png" width="300px">
 
 * Deep Learning
 
-![](images/deep_learning.png)
-![](images/RL.jpg)
+<img src="images/deep_learning.png" width="300px">
+<img src="images/RL.jpg" width="300px">
 
 ### Practical
 
-![](images/ML_in_action.png)
-![](images/building_ML_systems_with_python.png)
+<img src="images/ML_in_action.png" width="300px">
+<img src="images/building_ML_systems_with_python.png" width="300px">
+
 
 ### Coding
 
-![](images/Algo.png)
-![](images/CSAPP.png)
-![](images/python_for_data_analysis.png)
-![](images/fluent_python.png)
-![](images/high_performance_python.png)
-![](images/advanced_R.png)
-![](images/Learning_Spark.png)
-![](images/Learning_Scala.png)
+<img src="images/Algo.png" width="300px">
+<img src="images/CSAPP.png" width="300px">
+<img src="images/python_for_data_analysis.png" width="300px">
+<img src="images/fluent_python.png" width="300px">
+<img src="images/high_performance_python.png" width="300px">
+<img src="images/advanced_R.png" width="300px">
+<img src="images/Learning_Spark.png" width="300px">
+<img src="images/Learning_Scala.png" width="300px">
 
 ### Online Classes
 
