@@ -8,9 +8,9 @@ A **supervised** model has following parts:
 * **Hyper-parameters**: some **pre-set** macros which controls model complexity and/or model behavior. For example
     * **Polynomial regression**: order $n$
     * **Multi-dimensional linear regression**: [kernels](https://en.wikipedia.org/wiki/Kernel_regression), regularization parameter $\lambda$, regularization type L1/L2
-    * [**Random Forests**](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor): `n_estimators`, `max_depth`, etc.
+    * [**Random Forest**](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor): `n_estimators`, `max_depth`, etc.
     * **Neural Network**: learning rate, activation functions, drop-out ratio, etc.
-* **Algorithm**: i.e., which model? **Also a hyper-parameter** Examples: 
+* **Algorithm**: i.e., which model? **A hyper-parameter**. Examples: 
     * [Additive](https://en.wikipedia.org/wiki/Generalized_additive_model) or multiplicative
     * [Decision tree](https://en.wikipedia.org/wiki/Decision_tree)
     * [Support vector machine](https://en.wikipedia.org/wiki/Support_vector_machine)
@@ -29,7 +29,7 @@ A **supervised** model has following parts:
         * **Early stopping**: regularization in time
         * **Share parameter**: e.g., recurrent/convolutional network
         * ...
-* **Optimizer**: **Also a hyper-parameter**. How to find the best numerical solutions? For example:
+* **Optimizer**: **Again, a hyper-parameter**. How to find the best numerical solutions? For example:
     * Random guess
     * Closed-form solution
     * Gradient-based optimization
@@ -140,7 +140,111 @@ $$[\hat y_{t+H}, \dots ,\hat y_{t+1}] = f(y_t, y_{t-1})$$
 ![-c](images/rr.jpg)
 
 ## Hyperparameter Tuning
-    
+**The most time-costly thing you will ever encounter in ML!**
+
+### Model training
+When you hear
+> Let's train a model ...
+
+it means:
+
+1. Choose a set of hyper-parameter: 
+    * **Regularizer** $\lambda$
+    * **Model** $f(\cdot)$
+    * **Loss** $L(y, \hat y)$
+    * **Optimizer**
+2. Prepare dataset, $X$ and $Y$
+3. A supervised model, with parameters $\theta$, can be thus defined as
+$$\hat Y = f_{\lambda}(X, \theta)$$
+4. Use optimizer to solve
+$$\theta^* = \text{argmin}_{\theta} L(Y, \hat Y)$$
+
+### Model evaluations
+Hyper-parameter space is (almost) infinite and non-convex. There will always be a better model:
+
+* Impossible to achieve global maximum
+* Gradient-base method cannot be used at hyper-parameter level (not always true -- 
+[Learning to learn by gradient descent by gradient descent](https://arxiv.org/abs/1606.04474))
+
+Given we have some models (with their own hyper-parameters), **how do we compare them?**
+
+* Define an evaluation metric
+    * Sharpe Ratio
+    * PnL
+    * Accuracies
+    * Click-through rate (recommendation system)
+    * ETA (dispatch system)
+    * ...
+* Train these models on a training set
+* Evaluate on a validation set
+* Pick the best model(s) with best performance on the validation set
+* (Optional) Re-train the model(s) on train + validation set
+
+**Question**: How do we choose finite models out of the infinite model domain?
+
+### Time is money
+Some benchmarks of training a model (i.e., a set of hyper-parameter) with < 10G of data:
+
+* **Linear regressions**: gradient method, parallelizable, <1min
+* **Random forest**: gradient method, parallelizable, ~10min
+* **Boostings**: gradient method, cannot be parallelized, <1h
+
+Above have well-defined functional forms. What if
+
+* $f(\cdot)$ is explicitly unknown and multimodal.
+* Evaluations of $f(\cdot)$ may be perturbed (non-convex).
+* Evaluations of $f(\cdot)$ are expensive. 
+
+Such as 
+
+* **Neural networks**: hours ~ days
+![-c](images/NN_tune.png)
+* **Dispatch algo**: hours
+![-c](images/dispatch_tune.png)
+* **A/B Testing**: days
+![-c](images/ab_tune.png)
+* **Design of experiments: gene optimization**: years?
+![-c](images/gene_tune.png)
+
+
+**What are we aiming for**: Get a **good-enough model** with as fewer try as possible
+
+### Option 1: Use previous knowledge
+To select the parameters at hand. Perhaps not very scientific but still in use...
+
+### Option 2: Grid search
+* A brute force way to iterate through all possibilities.
+* [Sklearn API](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV)
+* How to grid search?
+    * discrete variables: simple iterate
+    * continuous variable
+        * uniform grid (e.g., hidden dimensions)
+        * log grid (e.g., learning rate)
+* **Curse of dimensionality!** 
+
+### Option 3: Random search
+
+* Some hyper-parameters are useless (won't improve model performace)
+* Better than grid search in various senses but still expensive to guarantee good coverage.
+
+
+![-c](images/random_search.png)
+
+**Question**: Can we do better?
+
+### Option 4: Bayesian optimization
+
+Given fixed data-set, $X$ and $Y$, and pre-specified evaluation metric, $L[f_\lambda(x, \theta), y]$, **hyper-parameter and model performance is a mapping**.
+
+**Goal**: fit a function (i.e., another model), $g: \lambda \to L(f_\lambda(X_{val}, \theta), Y_{val})$
+
+* $g$ is a non-parametric **meta-model**.
+* We can only afford very few "training data" (i.e., hyper-param search) to fit $g$ -- **Bayesian models are better**.
+* **State-of-art**: [Gaussian Process](https://en.wikipedia.org/wiki/Gaussian_process)
+* **Illustration** [here](https://www.iro.umontreal.ca/~bengioy/cifar/NCAP2014-summerschool/slides/Ryan_adams_140814_bayesopt_ncap.pdf)
+    * **Simple idea**: p8-17
+    * **Simple algo**: p34-40
+    * **Why doesn’t everyone use this**: p41
 
 ## Proper Backtesting
 
