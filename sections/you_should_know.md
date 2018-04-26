@@ -1,5 +1,0 @@
-# Prerequisite
-
-## Supervised Learning
-
-
