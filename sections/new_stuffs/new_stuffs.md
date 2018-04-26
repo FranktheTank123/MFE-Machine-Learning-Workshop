@@ -144,7 +144,7 @@ $$[\hat y_{t+H}, \dots ,\hat y_{t+1}] = f(y_t, y_{t-1})$$
 
 ### Model training
 When you hear
-> Let's train a model ...
+> Let's train a model ... -- Your future boss
 
 it means:
 
@@ -247,4 +247,23 @@ Given fixed data-set, $X$ and $Y$, and pre-specified evaluation metric, $L[f_\la
     * **Why doesn’t everyone use this**: p41
 
 ## Proper Backtesting
+
+> A **quantitative trading strategy** is indeed a **hyper-parameter** -- Frank Xia
+> **Backtesting**: validation/hyper-param tuning through time -- Frank Xia
+
+* How to split data **correctly** (Draw on white board)
+* Retrain on train+val is a **must** (when is not a must?)
+* Robust backtesting
+    * **Rolling backtest**: how to avoid **beginner's luck**?
+    * **Model ensemble**: how to reduce variance and seasonality? -- what do ensemble?
+
+> It's a miracle when **loss function** and **evaluation metric** match. -- Frank Xia
+  
+* To pick a proper loss function -- an art or a science? 
+
+
+
+
+
+
 
