@@ -1,6 +1,6 @@
 # Machine Learning Workshop -- A Full-Stack Perspective
 
-Frank Xia, May 2018
+[Frank Xia](https://www.linkedin.com/in/frank-tianyi-xia-aa141753/), May 2018
 
 
 ## Table of Content
