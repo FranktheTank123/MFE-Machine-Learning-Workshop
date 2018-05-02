@@ -67,6 +67,7 @@
 ### Programming language
 
 > Life is short, you need Python -- Bruce Eckel
+>
 > Life is short, I use Python -- Frank Xia
 
 #### Python Libraries
