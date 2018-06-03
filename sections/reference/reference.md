@@ -42,6 +42,7 @@
 * [CMU 15-213 (Intro to Computer Systems)](https://www.cs.cmu.edu/~213/)
 
 ## Other References
+* [Google's Rules of Machine Learning](https://developers.google.com/machine-learning/rules-of-ml/#before_machine_learning)
 * [A Tutorial on Bayesian Optimization for Machine Learning](https://www.iro.umontreal.ca/~bengioy/cifar/NCAP2014-summerschool/slides/Ryan_adams_140814_bayesopt_ncap.pdf)
 * [Glossary of common Machine Learning, Statistics and Data Science terms](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms) 
 * [Introduction to Bayesian Optimization](http://gpss.cc/gpmc17/slides/LancasterMasterclass_1.pdf)
